@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "aws-discovery"
+version = "0.1.0"
+description = ""
+authors = ["Joey Dreijer <jdreijer@optyx.io>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+neomodel = "^5.3.2"
+boto3 = "^1.35.12"
+pydantic = "^2.8.2"
+PyYAML = "^6.0.2"
+aiohttp = "^3.10.5"
+typer = "^0.12.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

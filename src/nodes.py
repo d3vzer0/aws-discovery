@@ -120,7 +120,7 @@ class AWS_CloudWatch_Alarm(BaseAWSResource, Node):
 
     @validator('relationship_types', pre=True, always=True)
     def set_relationship_types(cls, value):
-        value = { }
+        value = {}
         return value
 
 
@@ -132,7 +132,7 @@ class AWS_CodeDeploy_DeploymentConfig(BaseAWSResource, Node):
 
     @validator('relationship_types', pre=True, always=True)
     def set_relationship_types(cls, value):
-        value = { }
+        value = {}
         return value
 
 
@@ -156,7 +156,7 @@ class AWS_CodeBuild_Project(BaseAWSResource, Node):
 
     @validator('relationship_types', pre=True, always=True)
     def set_relationship_types(cls, value):
-        value = {'AWS::IAM::Role': 'is_associated_with_role' }
+        value = {'AWS::IAM::Role': 'is_associated_with_role'}
         return value
 
 

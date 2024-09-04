@@ -2,7 +2,7 @@ from src import nodes
 import json
 
 
-class AWS:
+class AWSLoader:
     def __init__(self, resources: list = None):
         self.resources = resources
 

@@ -1,4 +1,4 @@
-# AWS-Discovery
+# WIP: AWS-Discovery
 
 AWS-Discovery is a tool designed to visualize AWS resources as nodes and edges within a Neo4J graph database. Inspired by BloodHound's approach for Active Directory, this tool helps in understanding and analyzing the relationships and dependencies between various AWS resources. Currently the tool directly indexes the nodes/edges via the Neo4J API, the plan is to integrate this via BloodHound later as well :) 
 

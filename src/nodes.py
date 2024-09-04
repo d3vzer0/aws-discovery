@@ -255,7 +255,8 @@ class AWS_IAM_Group(BaseAWSResource, Node):
 
     @validator('relationship_types', pre=True, always=True)
     def set_relationship_types(cls, value):
-        value = {'AWS::IAM::User': 'contains_user','AWS::IAM::Policy': 'is_attached_to_customermanagedpolicy'}
+        value = {'AWS::IAM::User': 'contains_user',
+                 'AWS::IAM::Policy': 'is_attached_to_customermanagedpolicy'}
         return value
 
 
@@ -267,7 +268,8 @@ class AWS_IAM_Policy(BaseAWSResource, Node):
 
     @validator('relationship_types', pre=True, always=True)
     def set_relationship_types(cls, value):
-        value = {'AWS::IAM::Role': 'is_attached_to_role','AWS::IAM::User': 'is_attached_to_user',
+        value = {'AWS::IAM::Role': 'is_attached_to_role',
+                 'AWS::IAM::User': 'is_attached_to_user',
                  'AWS::IAM::Group': 'is_attached_to_group'}
         return value
 
@@ -380,7 +382,7 @@ class AWS_Lambda_Function(BaseAWSResource, Node):
 
     @validator('relationships', pre=True, always=True)
     def get_dynamic_relationships(cls, v, values, **kwargs):
-        rel_mapping = { 'lambda:InvokeFunction': 'invoked_by'}
+        rel_mapping = {'lambda:InvokeFunction': 'invoked_by'}
         try:
             get_policy = client.get_policy(
                 FunctionName=values['name'])
